@@ -18,7 +18,7 @@ class GradientView: UIView {
         
     }
 
-    @IBInspectable var bottomColor: UIColor = #colorLiteral(red: 0.1647058824, green: 0.8039215686, blue: 0.462745098, alpha: 1) {
+    @IBInspectable var bottomColor: UIColor = #colorLiteral(red: 0.1647058824, green: 0.3648210912, blue: 0.2592403237, alpha: 1) {
         didSet {
             self.setNeedsLayout()
         }

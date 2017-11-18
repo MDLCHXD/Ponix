@@ -14,6 +14,12 @@ class PodVC: UIViewController, UIScrollViewDelegate, UIPickerViewDelegate, UIPic
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var confirmationView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var checklistLabel: UILabel!
+    @IBOutlet weak var feedLabel: UILabel!
+    @IBOutlet weak var plantDrainSideLabel: UILabel!
+    @IBOutlet weak var recipeLabel: UILabel!
     
     @IBOutlet weak var plantSidePicker: UIPickerView!
     @IBOutlet weak var recipePicker: UIPickerView!
@@ -22,6 +28,8 @@ class PodVC: UIViewController, UIScrollViewDelegate, UIPickerViewDelegate, UIPic
     @IBOutlet weak var startFeedingBtn: UIButton!
     @IBOutlet weak var startDrainingBtn: UIButton!
     @IBOutlet weak var shutdownBtn: UIButton!
+    @IBOutlet weak var confirmationButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     
     var plantSidePickerData: [String] = [String]()
     var recipePickerData: [String] = [String]()
@@ -40,6 +48,7 @@ class PodVC: UIViewController, UIScrollViewDelegate, UIPickerViewDelegate, UIPic
         super.viewDidLoad()
         scrollView.delegate = self
         scrollView.isScrollEnabled = true
+        confirmationView.isHidden = true
         scrollView.contentSize = CGSize(width: 375, height: 1130)
         plantSidePicker.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         plantSidePicker.layer.cornerRadius = 3.0
@@ -139,13 +148,48 @@ class PodVC: UIViewController, UIScrollViewDelegate, UIPickerViewDelegate, UIPic
 
     @IBAction func startFeedingBtnPressed(_ sender: Any) {
         print(plantSideSelected, recipeSelected)
+        confirmationView.isHidden = false
+        titleLabel.text = "FEED PLANTS"
+        feedLabel.text = "SELECTED TO FEED"
+        checklistLabel.text = "Before feeding the plants, check on the following items: \n - Nutrient and pH solution levels should be filled above the marked lines \n - NFT pump switches should be on \n - All seedlings should be in place for \(plantSideSelected!) \n"
+        plantDrainSideLabel.isHidden = false
+        plantDrainSideLabel.text = plantSideSelected
+        recipeLabel.isHidden = false
+        recipeLabel.text = recipeSelected
+        confirmationButton.setTitle("YES", for: .normal)
+        confirmationButton.backgroundColor = #colorLiteral(red: 0.7058823529, green: 0.8039215686, blue: 0.462745098, alpha: 1)
+
+        
     }
     
     @IBAction func startDrainingBtnPressed(_ sender: Any) {
         print(drainSideSelected)
+        confirmationView.isHidden = false
+        titleLabel.text = "DRAIN PLANTS"
+        checklistLabel.text = "Are you sure you want to drain your plants?"
+        feedLabel.text = "SELECTED TO DRAIN"
+        plantDrainSideLabel.isHidden = false
+        plantDrainSideLabel.text = drainSideSelected
+        recipeLabel.isHidden = true
+        confirmationButton.setTitle("DRAIN", for: .normal)
+        confirmationButton.backgroundColor = #colorLiteral(red: 0.7058823529, green: 0.8039215686, blue: 0.462745098, alpha: 1)
     }
     
+    @IBAction func confirmationBtnPressed(_ sender: Any) {
+        confirmationView.isHidden = true
+    }
+    @IBAction func cancelBtnPressed(_ sender: Any) {
+        confirmationView.isHidden = true
+    }
     @IBAction func shutdownBtnPressed(_ sender: Any) {
+        confirmationView.isHidden = false
+        titleLabel.text = "SHUTDOWN SYSTEM"
+        checklistLabel.text = "Are you sure you want to shutdown your system?"
+        feedLabel.text = "SELECTED TO SHUTDOWN"
+        plantDrainSideLabel.isHidden = true
+        recipeLabel.isHidden = true
+        confirmationButton.backgroundColor = #colorLiteral(red: 0.7490196078, green: 0.4509803922, blue: 0.4705882353, alpha: 1)
+        confirmationButton.setTitle("SHUTDOWN", for: .normal)
         
     }
     

@@ -1,14 +1,14 @@
 //
-//  RoudedButton.swift
+//  StyledUIView.swift
 //  Ponix
 //
-//  Created by Andrew Smith on 11/14/17.
+//  Created by Andrew Smith on 11/19/17.
 //  Copyright © 2017 Andrew Smith. All rights reserved.
 //
 
 import UIKit
-@IBDesignable
-class RoudedButton: UIButton {
+
+class StyledUIView: UIView {
 
     @IBInspectable var cornerRadius: CGFloat = 3.0 {
         didSet {
@@ -28,4 +28,5 @@ class RoudedButton: UIButton {
     func setupView() {
         self.layer.cornerRadius = cornerRadius
     }
+
 }

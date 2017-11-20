@@ -12,6 +12,8 @@
 		DB9DBA2A1FC285C200C5D17B /* StyledHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA291FC285C200C5D17B /* StyledHeaderView.swift */; };
 		DB9DBA2C1FC28E1D00C5D17B /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA2B1FC28E1D00C5D17B /* ShadowButton.swift */; };
 		DB9DBA2E1FC2969300C5D17B /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA2D1FC2969300C5D17B /* StatsVC.swift */; };
+		DB9DBA361FC37B1800C5D17B /* AddPodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA341FC37B1800C5D17B /* AddPodVC.swift */; };
+		DB9DBA371FC37B1800C5D17B /* AddPodVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9DBA351FC37B1800C5D17B /* AddPodVC.xib */; };
 		DBB4BC0E1FB966FD00442418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4BC0D1FB966FD00442418 /* AppDelegate.swift */; };
 		DBB4BC131FB966FD00442418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB4BC111FB966FD00442418 /* Main.storyboard */; };
 		DBB4BC151FB966FD00442418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB4BC141FB966FD00442418 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		DB9DBA291FC285C200C5D17B /* StyledHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledHeaderView.swift; sourceTree = "<group>"; };
 		DB9DBA2B1FC28E1D00C5D17B /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
 		DB9DBA2D1FC2969300C5D17B /* StatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
+		DB9DBA341FC37B1800C5D17B /* AddPodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPodVC.swift; sourceTree = "<group>"; };
+		DB9DBA351FC37B1800C5D17B /* AddPodVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPodVC.xib; sourceTree = "<group>"; };
 		DBB4BC0A1FB966FD00442418 /* Ponix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ponix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB4BC0D1FB966FD00442418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBB4BC121FB966FD00442418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +85,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DB9DBA381FC37B2000C5D17B /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				DB9DBA351FC37B1800C5D17B /* AddPodVC.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		DBA175B11FBD0EE900B89A7B /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +121,7 @@
 		DBB4BC0C1FB966FD00442418 /* Ponix */ = {
 			isa = PBXGroup;
 			children = (
+				DB9DBA381FC37B2000C5D17B /* Xibs */,
 				DBA175B11FBD0EE900B89A7B /* Services */,
 				DBB4BC2F1FB96FDA00442418 /* Model */,
 				DBB4BC2C1FB96DF800442418 /* Utilities */,
@@ -140,6 +153,7 @@
 				DBB4BC261FB9678E00442418 /* PodVC.swift */,
 				DBB4BC281FB9679B00442418 /* MenuVC.swift */,
 				DB9DBA2D1FC2969300C5D17B /* StatsVC.swift */,
+				DB9DBA341FC37B1800C5D17B /* AddPodVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -238,6 +252,7 @@
 			files = (
 				DBB4BC181FB966FD00442418 /* LaunchScreen.storyboard in Resources */,
 				DBB4BC151FB966FD00442418 /* Assets.xcassets in Resources */,
+				DB9DBA371FC37B1800C5D17B /* AddPodVC.xib in Resources */,
 				DBB4BC131FB966FD00442418 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +320,7 @@
 				DBB4BC2E1FB96E0C00442418 /* Constants.swift in Sources */,
 				DBECCADB1FBBF856003CEF83 /* RoudedButton.swift in Sources */,
 				DBB4BC231FB9673600442418 /* SWRevealViewController.m in Sources */,
+				DB9DBA361FC37B1800C5D17B /* AddPodVC.swift in Sources */,
 				DB9DBA2C1FC28E1D00C5D17B /* ShadowButton.swift in Sources */,
 				DBB4BC291FB9679B00442418 /* MenuVC.swift in Sources */,
 				DBB4BC311FB9702200442418 /* Pod.swift in Sources */,

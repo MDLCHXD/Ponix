@@ -460,7 +460,37 @@
                     <view key="view" contentMode="scaleToFill" id="zoa-gD-VAY" customClass="GradientView" customModule="Ponix" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRK-gw-ZkN">
+                                <rect key="frame" x="268" y="100" width="27" height="44"/>
+                                <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addPodPressed:" destination="0Dn-nS-LFZ" eventType="touchUpInside" id="E4k-VV-zlc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Pod" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsy-KI-ZQw">
+                                <rect key="frame" x="16" y="112" width="75" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FYb-3O-ZXv"/>
+                                    <constraint firstAttribute="width" constant="75" id="RAS-OG-Xhd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="evU-tl-yC8" firstAttribute="bottom" secondItem="Xsy-KI-ZQw" secondAttribute="bottom" constant="534" id="5UB-QW-w9j"/>
+                            <constraint firstItem="evU-tl-yC8" firstAttribute="trailing" secondItem="cRK-gw-ZkN" secondAttribute="trailing" constant="80" id="Edz-IH-Vwd"/>
+                            <constraint firstItem="Xsy-KI-ZQw" firstAttribute="leading" secondItem="evU-tl-yC8" secondAttribute="leading" constant="16" id="Pda-Re-3Dc"/>
+                            <constraint firstItem="cRK-gw-ZkN" firstAttribute="top" secondItem="evU-tl-yC8" secondAttribute="top" constant="80" id="eNb-WT-tdV"/>
+                            <constraint firstItem="Xsy-KI-ZQw" firstAttribute="top" secondItem="evU-tl-yC8" secondAttribute="top" constant="92" id="h0h-Z9-54e"/>
+                            <constraint firstItem="evU-tl-yC8" firstAttribute="bottom" secondItem="cRK-gw-ZkN" secondAttribute="bottom" constant="523" id="lp8-Vo-b3a"/>
+                            <constraint firstItem="Xsy-KI-ZQw" firstAttribute="centerY" secondItem="cRK-gw-ZkN" secondAttribute="centerY" id="sgh-n1-obv"/>
+                            <constraint firstItem="cRK-gw-ZkN" firstAttribute="leading" secondItem="Xsy-KI-ZQw" secondAttribute="trailing" constant="177" id="t6A-iX-qv9"/>
+                            <constraint firstItem="cRK-gw-ZkN" firstAttribute="leading" secondItem="evU-tl-yC8" secondAttribute="leading" constant="268" id="xfk-f9-8pW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="evU-tl-yC8"/>
                     </view>
                 </viewController>
@@ -676,6 +706,7 @@
     </scenes>
     <resources>
         <image name="MenuBurger" width="40" height="40"/>
+        <image name="addChannelButton" width="22" height="22"/>
         <image name="mock_image_one" width="1280" height="720"/>
         <image name="mock_image_two" width="1920" height="1080"/>
     </resources>

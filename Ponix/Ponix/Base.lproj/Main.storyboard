@@ -54,7 +54,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8Q-x5-oFn">
-                                        <rect key="frame" x="16" y="33" width="34" height="30"/>
+                                        <rect key="frame" x="14" y="30" width="38" height="36"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -67,13 +68,13 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="fHP-Z7-JvR" secondAttribute="bottom" constant="5" id="9Xy-WS-Imt"/>
                                     <constraint firstItem="fHP-Z7-JvR" firstAttribute="centerX" secondItem="yVM-Lm-rvZ" secondAttribute="centerX" id="GdH-cj-ypS"/>
-                                    <constraint firstItem="fHP-Z7-JvR" firstAttribute="leading" secondItem="p8Q-x5-oFn" secondAttribute="trailing" constant="98" id="P7w-M8-RrU"/>
-                                    <constraint firstAttribute="bottom" secondItem="p8Q-x5-oFn" secondAttribute="bottom" constant="8" id="PKK-ma-SYM"/>
-                                    <constraint firstItem="p8Q-x5-oFn" firstAttribute="top" secondItem="yVM-Lm-rvZ" secondAttribute="top" constant="33" id="TTA-RZ-StP"/>
                                     <constraint firstItem="fHP-Z7-JvR" firstAttribute="top" secondItem="yVM-Lm-rvZ" secondAttribute="top" constant="27" id="Zgf-Ip-M6U"/>
                                     <constraint firstItem="fHP-Z7-JvR" firstAttribute="centerX" secondItem="yVM-Lm-rvZ" secondAttribute="centerX" id="b1N-Z9-05K"/>
                                     <constraint firstAttribute="height" constant="71" id="d4U-qt-lqL"/>
-                                    <constraint firstItem="p8Q-x5-oFn" firstAttribute="leading" secondItem="yVM-Lm-rvZ" secondAttribute="leading" constant="16" id="vow-RV-b1B"/>
+                                    <constraint firstItem="fHP-Z7-JvR" firstAttribute="leading" secondItem="p8Q-x5-oFn" secondAttribute="trailing" constant="96" id="mAq-vQ-orY"/>
+                                    <constraint firstItem="p8Q-x5-oFn" firstAttribute="leading" secondItem="yVM-Lm-rvZ" secondAttribute="leading" constant="14" id="o0t-dU-z1u"/>
+                                    <constraint firstItem="p8Q-x5-oFn" firstAttribute="top" secondItem="yVM-Lm-rvZ" secondAttribute="top" constant="30" id="p32-sL-w8n"/>
+                                    <constraint firstAttribute="bottom" secondItem="p8Q-x5-oFn" secondAttribute="bottom" constant="5" id="xZL-BD-Xkv"/>
                                     <constraint firstItem="fHP-Z7-JvR" firstAttribute="centerX" secondItem="yVM-Lm-rvZ" secondAttribute="centerX" id="xpi-0r-ogg"/>
                                 </constraints>
                             </view>

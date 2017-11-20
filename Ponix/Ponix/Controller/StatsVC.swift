@@ -7,35 +7,32 @@
 //
 
 import UIKit
-
-class StatsVC: UIViewController {
+@IBDesignable
+class StatsVC: UIViewController, UIScrollViewDelegate {
 
     
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var featuresButton: UIButton!
+    @IBOutlet weak var statScrollView: UIScrollView!
+    @IBOutlet weak var farmTypeLabel: UILabel!
+    @IBOutlet weak var StatsView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        statScrollView.delegate = self
+        statScrollView.isScrollEnabled = true
+        statScrollView.contentSize = CGSize(width: 375, height: 700)
+        makeRoundCorners()
         menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func makeRoundCorners() {
+        farmTypeLabel.layer.cornerRadius = 3.0
+        StatsView.layer.cornerRadius = 3.0
     }
-    */
     
     @IBAction func featuresPressed(_ sender: Any) {
         performSegue(withIdentifier: TO_FEATURES, sender: nil)

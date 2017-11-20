@@ -44,7 +44,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1130"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yVM-Lm-rvZ">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yVM-Lm-rvZ" customClass="StyledHeaderView" customModule="Ponix" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auZ-YG-7IT">
@@ -212,21 +212,48 @@
                                                             <constraint firstAttribute="trailing" secondItem="awh-3p-pnI" secondAttribute="trailing" constant="8" id="yPm-H5-zV6"/>
                                                         </constraints>
                                                     </view>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mock_image_one" translatesAutoresizingMaskIntoConstraints="NO" id="ZKw-jn-BHo">
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAS-7Z-MkG" customClass="StyledUIView" customModule="Ponix" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="558" width="359" height="250"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mock_image_one" translatesAutoresizingMaskIntoConstraints="NO" id="ZKw-jn-BHo" customClass="StyledImage" customModule="Ponix" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="250"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="359" id="1HD-Aq-cRW"/>
+                                                                    <constraint firstAttribute="height" constant="250" id="bO0-gI-pE6"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="359" id="1HD-Aq-cRW"/>
-                                                            <constraint firstAttribute="height" constant="250" id="bO0-gI-pE6"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ZKw-jn-BHo" secondAttribute="bottom" id="6k3-8W-g0u"/>
+                                                            <constraint firstAttribute="width" constant="359" id="Rdy-4V-6Cn"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ZKw-jn-BHo" secondAttribute="trailing" id="TCy-Y0-5yI"/>
+                                                            <constraint firstItem="ZKw-jn-BHo" firstAttribute="leading" secondItem="tAS-7Z-MkG" secondAttribute="leading" id="hI0-P8-dQU"/>
+                                                            <constraint firstAttribute="height" constant="250" id="m76-TV-hJS"/>
+                                                            <constraint firstItem="ZKw-jn-BHo" firstAttribute="top" secondItem="tAS-7Z-MkG" secondAttribute="top" id="omb-3T-iiB"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mock_image_two" translatesAutoresizingMaskIntoConstraints="NO" id="1wL-Ez-FIU">
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AKL-Lw-zDR" customClass="StyledUIView" customModule="Ponix" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="819" width="359" height="250"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mock_image_two" translatesAutoresizingMaskIntoConstraints="NO" id="1wL-Ez-FIU" customClass="StyledImage" customModule="Ponix" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="250"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="359" id="aoo-Y7-XD2"/>
+                                                                    <constraint firstAttribute="height" constant="250" id="gHX-sU-D4i"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="359" id="aoo-Y7-XD2"/>
-                                                            <constraint firstAttribute="height" constant="250" id="gHX-sU-D4i"/>
+                                                            <constraint firstItem="1wL-Ez-FIU" firstAttribute="leading" secondItem="AKL-Lw-zDR" secondAttribute="leading" id="5AE-zb-gJq"/>
+                                                            <constraint firstAttribute="trailing" secondItem="1wL-Ez-FIU" secondAttribute="trailing" id="G0Z-dl-xw6"/>
+                                                            <constraint firstAttribute="height" constant="250" id="La0-ON-WwZ"/>
+                                                            <constraint firstItem="1wL-Ez-FIU" firstAttribute="top" secondItem="AKL-Lw-zDR" secondAttribute="top" id="aKl-tZ-MNe"/>
+                                                            <constraint firstAttribute="bottom" secondItem="1wL-Ez-FIU" secondAttribute="bottom" id="f16-k5-1Oq"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyt-N9-egl" customClass="RoudedButton" customModule="Ponix" customModuleProvider="target">
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyt-N9-egl" customClass="ShadowButton" customModule="Ponix" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="1080" width="359" height="50"/>
                                                         <color key="backgroundColor" red="0.74901960784313726" green="0.45098039215686275" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -242,13 +269,19 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="tAS-7Z-MkG" firstAttribute="centerX" secondItem="2mF-aC-2kN" secondAttribute="centerX" id="0zs-mX-NT6"/>
                                                     <constraint firstAttribute="width" constant="359" id="67u-kJ-gAf"/>
                                                     <constraint firstItem="Cyt-N9-egl" firstAttribute="bottom" secondItem="2Cm-is-Bad" secondAttribute="bottom" constant="8" id="Elj-OW-wXO"/>
+                                                    <constraint firstItem="AKL-Lw-zDR" firstAttribute="trailing" secondItem="2Cm-is-Bad" secondAttribute="trailing" id="OV9-dL-6Df"/>
+                                                    <constraint firstItem="AKL-Lw-zDR" firstAttribute="leading" secondItem="2Cm-is-Bad" secondAttribute="leading" id="RJf-uE-UJo"/>
+                                                    <constraint firstItem="tAS-7Z-MkG" firstAttribute="trailing" secondItem="2Cm-is-Bad" secondAttribute="trailing" id="bCG-Zl-RY5"/>
+                                                    <constraint firstItem="tAS-7Z-MkG" firstAttribute="leading" secondItem="2Cm-is-Bad" secondAttribute="leading" id="lLd-49-yLK"/>
                                                     <constraint firstAttribute="height" constant="1130" id="pCS-cr-ORn"/>
                                                 </constraints>
                                                 <viewLayoutGuide key="safeArea" id="2Cm-is-Bad"/>
                                             </stackView>
                                         </subviews>
+                                        <color key="backgroundColor" red="0.70588235290000001" green="0.80392156859999997" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1130" id="5Io-3o-yuU"/>
                                             <constraint firstAttribute="bottom" secondItem="2mF-aC-2kN" secondAttribute="bottom" constant="8" id="EiX-dW-oIZ"/>
@@ -379,7 +412,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.20721257307807806" green="0.20721257307807806" blue="0.20721257307807806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="tpd-Jl-8bz" secondAttribute="trailing" constant="16" id="0ax-Jj-y5I"/>
                             <constraint firstItem="tpd-Jl-8bz" firstAttribute="top" secondItem="yVM-Lm-rvZ" secondAttribute="bottom" constant="29" id="3GE-j5-TEh"/>

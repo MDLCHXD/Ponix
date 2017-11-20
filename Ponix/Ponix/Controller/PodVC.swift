@@ -11,7 +11,6 @@ import UIKit
 @IBDesignable
 class PodVC: UIViewController, UIScrollViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var confirmationView: UIView!
@@ -59,9 +58,7 @@ class PodVC: UIViewController, UIScrollViewDelegate, UIPickerViewDelegate, UIPic
         headerView.layer.shadowColor = #colorLiteral(red: 0.1659789241, green: 0.8039215686, blue: 0.462745098, alpha: 1)
          */
         
-        menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
         
         plantSidePickerData = ["Left Side","Right Side","Both Sides"]
         recipePickerData = ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5"]
@@ -194,7 +191,10 @@ class PodVC: UIViewController, UIScrollViewDelegate, UIPickerViewDelegate, UIPic
     }
     
     
-
+    @IBAction func backBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
  
 
 }

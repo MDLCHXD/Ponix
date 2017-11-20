@@ -11,6 +11,7 @@
 		DB9DBA281FC21DB900C5D17B /* StyledUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA271FC21DB900C5D17B /* StyledUIView.swift */; };
 		DB9DBA2A1FC285C200C5D17B /* StyledHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA291FC285C200C5D17B /* StyledHeaderView.swift */; };
 		DB9DBA2C1FC28E1D00C5D17B /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA2B1FC28E1D00C5D17B /* ShadowButton.swift */; };
+		DB9DBA2E1FC2969300C5D17B /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA2D1FC2969300C5D17B /* StatsVC.swift */; };
 		DBB4BC0E1FB966FD00442418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4BC0D1FB966FD00442418 /* AppDelegate.swift */; };
 		DBB4BC131FB966FD00442418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB4BC111FB966FD00442418 /* Main.storyboard */; };
 		DBB4BC151FB966FD00442418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB4BC141FB966FD00442418 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		DB9DBA271FC21DB900C5D17B /* StyledUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledUIView.swift; sourceTree = "<group>"; };
 		DB9DBA291FC285C200C5D17B /* StyledHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledHeaderView.swift; sourceTree = "<group>"; };
 		DB9DBA2B1FC28E1D00C5D17B /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
+		DB9DBA2D1FC2969300C5D17B /* StatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
 		DBB4BC0A1FB966FD00442418 /* Ponix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ponix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB4BC0D1FB966FD00442418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBB4BC121FB966FD00442418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				DBB4BC261FB9678E00442418 /* PodVC.swift */,
 				DBB4BC281FB9679B00442418 /* MenuVC.swift */,
+				DB9DBA2D1FC2969300C5D17B /* StatsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				DBECCADD1FBBF89B003CEF83 /* StyledImage.swift in Sources */,
 				DBB4BC0E1FB966FD00442418 /* AppDelegate.swift in Sources */,
 				DBB4BC2B1FB96AA100442418 /* GradientView.swift in Sources */,
+				DB9DBA2E1FC2969300C5D17B /* StatsVC.swift in Sources */,
 				DBB4BC271FB9678E00442418 /* PodVC.swift in Sources */,
 				DBB4BC2E1FB96E0C00442418 /* Constants.swift in Sources */,
 				DBECCADB1FBBF856003CEF83 /* RoudedButton.swift in Sources */,

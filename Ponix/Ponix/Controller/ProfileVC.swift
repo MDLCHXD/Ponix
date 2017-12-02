@@ -8,12 +8,12 @@
 
 import UIKit
 
-class MenuVC: UIViewController {
+class ProfileVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
+
 
     }
 

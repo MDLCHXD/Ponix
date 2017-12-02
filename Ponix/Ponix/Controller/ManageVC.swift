@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class PodVC: UIViewController, UIScrollViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class ManageVC: UIViewController, UIScrollViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -52,7 +52,10 @@ class PodVC: UIViewController, UIScrollViewDelegate, UIPickerViewDelegate, UIPic
         plantSidePicker.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         plantSidePicker.layer.cornerRadius = 3.0
         
-        
+        let color = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.8)
+        let textColor = UIColor(red: 171/255, green: 198/255, blue: 107/255, alpha: 1)
+        UITabBar.appearance().barTintColor = color
+        UITabBar.appearance().tintColor = textColor
         /*headerView.layer.shadowOffset = CGSize(width: 1, height: 1)
         headerView.layer.shadowRadius = 3.0
         headerView.layer.shadowColor = #colorLiteral(red: 0.1659789241, green: 0.8039215686, blue: 0.462745098, alpha: 1)
@@ -80,6 +83,7 @@ class PodVC: UIViewController, UIScrollViewDelegate, UIPickerViewDelegate, UIPic
             startDrainingBtn.backgroundColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
             
         }
+        
         
     }
     

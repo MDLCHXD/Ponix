@@ -11,7 +11,7 @@
 		DB9DBA281FC21DB900C5D17B /* StyledUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA271FC21DB900C5D17B /* StyledUIView.swift */; };
 		DB9DBA2A1FC285C200C5D17B /* StyledHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA291FC285C200C5D17B /* StyledHeaderView.swift */; };
 		DB9DBA2C1FC28E1D00C5D17B /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA2B1FC28E1D00C5D17B /* ShadowButton.swift */; };
-		DB9DBA2E1FC2969300C5D17B /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA2D1FC2969300C5D17B /* StatsVC.swift */; };
+		DB9DBA2E1FC2969300C5D17B /* MonitorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA2D1FC2969300C5D17B /* MonitorVC.swift */; };
 		DB9DBA361FC37B1800C5D17B /* AddPodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA341FC37B1800C5D17B /* AddPodVC.swift */; };
 		DB9DBA371FC37B1800C5D17B /* AddPodVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9DBA351FC37B1800C5D17B /* AddPodVC.xib */; };
 		DBB4BC0E1FB966FD00442418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4BC0D1FB966FD00442418 /* AppDelegate.swift */; };
@@ -19,8 +19,8 @@
 		DBB4BC151FB966FD00442418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB4BC141FB966FD00442418 /* Assets.xcassets */; };
 		DBB4BC181FB966FD00442418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB4BC161FB966FD00442418 /* LaunchScreen.storyboard */; };
 		DBB4BC231FB9673600442418 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB4BC211FB9673600442418 /* SWRevealViewController.m */; };
-		DBB4BC271FB9678E00442418 /* PodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4BC261FB9678E00442418 /* PodVC.swift */; };
-		DBB4BC291FB9679B00442418 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4BC281FB9679B00442418 /* MenuVC.swift */; };
+		DBB4BC271FB9678E00442418 /* ManageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4BC261FB9678E00442418 /* ManageVC.swift */; };
+		DBB4BC291FB9679B00442418 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4BC281FB9679B00442418 /* ProfileVC.swift */; };
 		DBB4BC2B1FB96AA100442418 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4BC2A1FB96AA100442418 /* GradientView.swift */; };
 		DBB4BC2E1FB96E0C00442418 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4BC2D1FB96E0C00442418 /* Constants.swift */; };
 		DBB4BC311FB9702200442418 /* Pod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4BC301FB9702200442418 /* Pod.swift */; };
@@ -34,7 +34,7 @@
 		DB9DBA271FC21DB900C5D17B /* StyledUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledUIView.swift; sourceTree = "<group>"; };
 		DB9DBA291FC285C200C5D17B /* StyledHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledHeaderView.swift; sourceTree = "<group>"; };
 		DB9DBA2B1FC28E1D00C5D17B /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
-		DB9DBA2D1FC2969300C5D17B /* StatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
+		DB9DBA2D1FC2969300C5D17B /* MonitorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorVC.swift; sourceTree = "<group>"; };
 		DB9DBA341FC37B1800C5D17B /* AddPodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPodVC.swift; sourceTree = "<group>"; };
 		DB9DBA351FC37B1800C5D17B /* AddPodVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPodVC.xib; sourceTree = "<group>"; };
 		DBB4BC0A1FB966FD00442418 /* Ponix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ponix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,8 +46,8 @@
 		DBB4BC201FB9673500442418 /* Ponix-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ponix-Bridging-Header.h"; sourceTree = "<group>"; };
 		DBB4BC211FB9673600442418 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		DBB4BC221FB9673600442418 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		DBB4BC261FB9678E00442418 /* PodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodVC.swift; sourceTree = "<group>"; };
-		DBB4BC281FB9679B00442418 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		DBB4BC261FB9678E00442418 /* ManageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageVC.swift; sourceTree = "<group>"; };
+		DBB4BC281FB9679B00442418 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		DBB4BC2A1FB96AA100442418 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DBB4BC2D1FB96E0C00442418 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DBB4BC301FB9702200442418 /* Pod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pod.swift; sourceTree = "<group>"; };
@@ -150,9 +150,9 @@
 		DBB4BC241FB9676200442418 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DBB4BC261FB9678E00442418 /* PodVC.swift */,
-				DBB4BC281FB9679B00442418 /* MenuVC.swift */,
-				DB9DBA2D1FC2969300C5D17B /* StatsVC.swift */,
+				DBB4BC261FB9678E00442418 /* ManageVC.swift */,
+				DBB4BC281FB9679B00442418 /* ProfileVC.swift */,
+				DB9DBA2D1FC2969300C5D17B /* MonitorVC.swift */,
 				DB9DBA341FC37B1800C5D17B /* AddPodVC.swift */,
 			);
 			path = Controller;
@@ -315,14 +315,14 @@
 				DBECCADD1FBBF89B003CEF83 /* StyledImage.swift in Sources */,
 				DBB4BC0E1FB966FD00442418 /* AppDelegate.swift in Sources */,
 				DBB4BC2B1FB96AA100442418 /* GradientView.swift in Sources */,
-				DB9DBA2E1FC2969300C5D17B /* StatsVC.swift in Sources */,
-				DBB4BC271FB9678E00442418 /* PodVC.swift in Sources */,
+				DB9DBA2E1FC2969300C5D17B /* MonitorVC.swift in Sources */,
+				DBB4BC271FB9678E00442418 /* ManageVC.swift in Sources */,
 				DBB4BC2E1FB96E0C00442418 /* Constants.swift in Sources */,
 				DBECCADB1FBBF856003CEF83 /* RoudedButton.swift in Sources */,
 				DBB4BC231FB9673600442418 /* SWRevealViewController.m in Sources */,
 				DB9DBA361FC37B1800C5D17B /* AddPodVC.swift in Sources */,
 				DB9DBA2C1FC28E1D00C5D17B /* ShadowButton.swift in Sources */,
-				DBB4BC291FB9679B00442418 /* MenuVC.swift in Sources */,
+				DBB4BC291FB9679B00442418 /* ProfileVC.swift in Sources */,
 				DBB4BC311FB9702200442418 /* Pod.swift in Sources */,
 				DB9DBA2A1FC285C200C5D17B /* StyledHeaderView.swift in Sources */,
 				DB9DBA281FC21DB900C5D17B /* StyledUIView.swift in Sources */,

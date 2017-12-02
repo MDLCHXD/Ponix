@@ -8,7 +8,7 @@
 
 import UIKit
 @IBDesignable
-class StatsVC: UIViewController, UIScrollViewDelegate {
+class MonitorVC: UIViewController, UIScrollViewDelegate {
 
     
     @IBOutlet weak var menuButton: UIButton!
@@ -23,10 +23,8 @@ class StatsVC: UIViewController, UIScrollViewDelegate {
         statScrollView.isScrollEnabled = true
         statScrollView.contentSize = CGSize(width: 375, height: 700)
         makeRoundCorners()
-        menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         
+
     }
     
     func makeRoundCorners() {

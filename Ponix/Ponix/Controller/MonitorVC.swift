@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 @IBDesignable
 class MonitorVC: UIViewController, UIScrollViewDelegate {
 
@@ -23,6 +24,9 @@ class MonitorVC: UIViewController, UIScrollViewDelegate {
         statScrollView.isScrollEnabled = true
         statScrollView.contentSize = CGSize(width: 375, height: 700)
         makeRoundCorners()
+        
+        
+        
         
 
     }

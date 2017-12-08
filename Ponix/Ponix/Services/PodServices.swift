@@ -18,20 +18,20 @@ class PodService {
     public private(set) var sequenceResponseDose = ""
     public private(set) var sequenceResponseDrain = ""
     public private(set) var sequenceResponseInitialize = ""
-
-
+    public private(set) var botsResponse = ""
 
     
+    public private(set) var botsLvI = ""
+    public private(set) var botsMv = ""
+    public private(set) var botsRvI = ""
+    public private(set) var botsLvO = ""
+    public private(set) var botsRvO = ""
     
-    
-    var sequenceResult: String {
-        get {
-            return defaults.value(forKey: SEQUENCE_KEY) as! String
-        }
-        set {
-            defaults.set(newValue, forKey: SEQUENCE_KEY)
-        }
-    }
+    public private(set) var pumpLp = ""
+    public private(set) var pumpMp = ""
+    public private(set) var pumpRp = ""
+
+
     
     func returnDose(dose: String, completion: @escaping CompletionHandler) {
         
@@ -91,7 +91,75 @@ class PodService {
         }
     }
     
-   /* func splitSequenceData(components: String) -> String {
-    //{dose = (Week1, "Left Side"); drain = (target); initialize = ();}
-    }*/
+    func returnBots(valve: String, pump: String, peri: String, completion: @escaping CompletionHandler) {
+        
+        let body: [String: Any] = [
+            
+            "valve": valve,
+            "pump": pump,
+            "peri": peri
+        
+        ]
+        
+        Alamofire.request(URL_BOTS, method: .get, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString { (response)
+            in
+            if response.result.error == nil {
+                self.botsResponse = String(describing: response)
+                completion(true)
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
+    
+    func returnBotRvO(id: String, bot: String, state: String, completion: @escaping CompletionHandler) {
+        let body: [String: Any] = [
+            "_id": id,
+            "bot": bot,
+            "state": state
+        ]
+        
+        Alamofire.request(URL_BOTS_RVO, method: .get, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response)
+            in
+            if response.result.error == nil {
+                self.botsRvO = String(describing: response)
+                //print(self.botsRvO)
+                let responseJSON = response.result.value as! [String: AnyObject]
+                let bot = String(describing: responseJSON["bot"])
+                print("Your id is \(bot)")
+                completion(true)
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
+    func scanBotResponse(components: String) -> Array<Any> {
+        
+        let scanner = Scanner(string: components)
+        let skipped = CharacterSet(charactersIn: "[Optional(SUCCESS),:{}]")
+        let comma = CharacterSet(charactersIn: ",")
+        let colon = CharacterSet(charactersIn: ":")
+        let stateStatus = CharacterSet(charactersIn: "")
+        
+        scanner.charactersToBeSkipped = skipped
+    
+        var id, bot, state : NSString?
+        
+        scanner.scanUpToCharacters(from: comma, into: &id)
+        scanner.scanUpToCharacters(from: colon, into: &bot)
+        scanner.scanUpToCharacters(from: stateStatus, into: &state)
+        
+        let idResponse = id
+        let botResponse = bot
+        let stateResponse = state
+        
+        return [ idResponse, botResponse, stateResponse]
+
+
+        
+    }
 }

@@ -25,10 +25,11 @@ class MonitorVC: UIViewController, UIScrollViewDelegate {
         statScrollView.contentSize = CGSize(width: 375, height: 700)
         makeRoundCorners()
         
-        returnDose()
+        /*returnDose()
         returnDrain()
-        returnInitialize()
-        
+        returnInitialize()*/
+        //returnBots()
+        returnBotRvO()
         
 
     }
@@ -44,9 +45,7 @@ class MonitorVC: UIViewController, UIScrollViewDelegate {
     
     func returnDose() {
        
-        let initialize = SequenceService.instance.initialize
         let dose = SequenceService.instance.dose
-        let drain = SequenceService.instance.drain
         PodService.instance.returnDose(dose: dose, completion: {(success) in
             if success {
                 print(PodService.instance.sequenceResponseDose)
@@ -57,8 +56,6 @@ class MonitorVC: UIViewController, UIScrollViewDelegate {
     
     func returnDrain() {
         
-        let initialize = SequenceService.instance.initialize
-        let dose = SequenceService.instance.dose
         let drain = SequenceService.instance.drain
         PodService.instance.returnDrain(drain: drain, completion: {(success) in
             if success {
@@ -71,14 +68,32 @@ class MonitorVC: UIViewController, UIScrollViewDelegate {
     func returnInitialize() {
         
         let initialize = SequenceService.instance.initialize
-        let dose = SequenceService.instance.dose
-        let drain = SequenceService.instance.drain
         PodService.instance.returnInitalize(initialize: initialize, completion: {(success) in
             if success {
                 print(PodService.instance.sequenceResponseInitialize)
             }
         })
         
+    }
+    
+    func returnBotRvO() {
+        let id = String()
+        let bot = String()
+        let state = String()
+        PodService.instance.returnBotRvO(id: id, bot: bot, state: state, completion: {(success) in
+            if success {
+                print(PodService.instance.botsRvO)
+            }
+        })
+    }
+    
+    func returnBots() {
+        let valve = String()
+        let pump = String()
+        let peri = String()
+        PodService.instance.returnBots(valve: valve, pump: pump, peri: peri, completion: {(success) in
+            print(PodService.instance.scanBotResponse(components: PodService.instance.botsResponse))
+        })
     }
     
     

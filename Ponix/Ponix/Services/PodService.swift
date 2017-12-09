@@ -94,11 +94,9 @@ class PodService {
     func returnBots(valve: String, pump: String, peri: String, completion: @escaping CompletionHandler) {
         
         let body: [String: Any] = [
-            
             "valve": valve,
             "pump": pump,
             "peri": peri
-        
         ]
         
         Alamofire.request(URL_BOTS, method: .get, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString { (response)
@@ -113,7 +111,7 @@ class PodService {
         }
     }
     
-    
+
     func returnBotRvO(id: String, bot: String, state: String, completion: @escaping CompletionHandler) {
         let body: [String: Any] = [
             "_id": id,
@@ -128,7 +126,8 @@ class PodService {
                 //print(self.botsRvO)
                 let responseJSON = response.result.value as! [String: AnyObject]
                 let bot = String(describing: responseJSON["bot"])
-                print("Your id is \(bot)")
+                let state = String(describing: responseJSON["state"])
+                print("Your id is \(bot)" + "Your state is \(state)")
                 completion(true)
             } else {
                 completion(false)
@@ -137,29 +136,106 @@ class PodService {
         }
     }
     
-    func scanBotResponse(components: String) -> Array<Any> {
+    func returnBotRvI(id: String, bot: String, state: String, completion: @escaping CompletionHandler) {
+        let body: [String: Any] = [
+            "_id": id,
+            "bot": bot,
+            "state": state
+        ]
         
-        let scanner = Scanner(string: components)
-        let skipped = CharacterSet(charactersIn: "[Optional(SUCCESS),:{}]")
-        let comma = CharacterSet(charactersIn: ",")
-        let colon = CharacterSet(charactersIn: ":")
-        let stateStatus = CharacterSet(charactersIn: "")
-        
-        scanner.charactersToBeSkipped = skipped
-    
-        var id, bot, state : NSString?
-        
-        scanner.scanUpToCharacters(from: comma, into: &id)
-        scanner.scanUpToCharacters(from: colon, into: &bot)
-        scanner.scanUpToCharacters(from: stateStatus, into: &state)
-        
-        let idResponse = id
-        let botResponse = bot
-        let stateResponse = state
-        
-        return [ idResponse, botResponse, stateResponse]
-
-
-        
+        Alamofire.request(URL_BOTS_RVI, method: .get, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response)
+            in
+            if response.result.error == nil {
+                self.botsRvI = String(describing: response)
+                //print(self.botsRvO)
+                let responseJSON = response.result.value as! [String: AnyObject]
+                let bot = String(describing: responseJSON["bot"])
+                let state = String(describing: responseJSON["state"])
+                print("Your bot is \(bot)" + "Your state is \(state)")
+                completion(true)
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
     }
+    
+    func returnBotLvO(id: String, bot: String, state: String, completion: @escaping CompletionHandler) {
+        let body: [String: Any] = [
+            "_id": id,
+            "bot": bot,
+            "state": state
+        ]
+        
+        Alamofire.request(URL_BOTS_LVO, method: .get, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response)
+            in
+            if response.result.error == nil {
+                self.botsLvO = String(describing: response)
+                //print(self.botsRvO)
+                let responseJSON = response.result.value as! [String: AnyObject]
+                let bot = String(describing: responseJSON["bot"])
+                let state = String(describing: responseJSON["state"])
+                print("Your bot is \(bot)" + "Your state is \(state)")
+                completion(true)
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
+    func returnBotLvI(id: String, bot: String, state: String, completion: @escaping CompletionHandler) {
+        let body: [String: Any] = [
+            "_id": id,
+            "bot": bot,
+            "state": state
+        ]
+        
+        Alamofire.request(URL_BOTS_LVI, method: .get, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response)
+            in
+            if response.result.error == nil {
+                self.botsLvI = String(describing: response)
+                //print(self.botsRvO)
+                let responseJSON = response.result.value as! [String: AnyObject]
+                let bot = String(describing: responseJSON["bot"])
+                let state = String(describing: responseJSON["state"])
+                print("Your bot is \(bot)" + "Your state is \(state)")
+                completion(true)
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
+    
+    func returnBotMv(id: String, bot: String, state: String, completion: @escaping CompletionHandler) {
+        let body: [String: Any] = [
+            "_id": id,
+            "bot": bot,
+            "state": state
+        ]
+        
+        Alamofire.request(URL_BOTS_Mv, method: .get, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response)
+            in
+            if response.result.error == nil {
+                self.botsMv = String(describing: response)
+                //print(self.botsRvO)
+                let responseJSON = response.result.value as! [String: AnyObject]
+                let bot = String(describing: responseJSON["bot"])
+                let state = String(describing: responseJSON["state"])
+                print("Your bot is \(bot)" + "Your state is \(state)")
+                completion(true)
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
+  
+
+
+        
+    
 }

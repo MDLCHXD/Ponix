@@ -30,8 +30,10 @@ class MonitorVC: UIViewController, UIScrollViewDelegate {
         returnInitialize()*/
         //returnBots()
         returnBotRvO()
-        
-
+        returnBotRvI()
+        returnBotLvI()
+        returnBotLvO()
+        returnBotMv()
     }
     
     func makeRoundCorners() {
@@ -87,12 +89,53 @@ class MonitorVC: UIViewController, UIScrollViewDelegate {
         })
     }
     
+    func returnBotRvI() {
+        let id = String()
+        let bot = String()
+        let state = String()
+        PodService.instance.returnBotRvI(id: id, bot: bot, state: state, completion: {(success) in
+            if success {
+                print(PodService.instance.botsRvI)
+            }
+        })
+    }
+    
+    func returnBotLvO() {
+        let id = String()
+        let bot = String()
+        let state = String()
+        PodService.instance.returnBotLvO(id: id, bot: bot, state: state, completion: {(success) in
+            if success {
+                print(PodService.instance.botsLvO)
+            }
+        })
+    }
+    func returnBotLvI() {
+        let id = String()
+        let bot = String()
+        let state = String()
+        PodService.instance.returnBotLvI(id: id, bot: bot, state: state, completion: {(success) in
+            if success {
+                print(PodService.instance.botsLvI)
+            }
+        })
+    }
+    func returnBotMv() {
+        let id = String()
+        let bot = String()
+        let state = String()
+        PodService.instance.returnBotMv(id: id, bot: bot, state: state, completion: {(success) in
+            if success {
+                print(PodService.instance.botsMv)
+            }
+        })
+    }
     func returnBots() {
         let valve = String()
         let pump = String()
         let peri = String()
         PodService.instance.returnBots(valve: valve, pump: pump, peri: peri, completion: {(success) in
-            print(PodService.instance.scanBotResponse(components: PodService.instance.botsResponse))
+            print(PodService.instance.botsResponse)
         })
     }
     

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D91DEFA4D98F28915734FF86 /* Pods_Ponix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D675D5F93A5F1610B15A058 /* Pods_Ponix.framework */; };
-		DB66614F1FD369F100269452 /* PodServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66614E1FD369F100269452 /* PodServices.swift */; };
+		DB66614F1FD369F100269452 /* PodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66614E1FD369F100269452 /* PodService.swift */; };
 		DB6661511FD384FF00269452 /* SequenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6661501FD384FF00269452 /* SequenceService.swift */; };
 		DB9DBA281FC21DB900C5D17B /* StyledUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA271FC21DB900C5D17B /* StyledUIView.swift */; };
 		DB9DBA2A1FC285C200C5D17B /* StyledHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9DBA291FC285C200C5D17B /* StyledHeaderView.swift */; };
@@ -33,7 +33,7 @@
 /* Begin PBXFileReference section */
 		211C0C001E529DF921D119A5 /* Pods-Ponix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ponix.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ponix/Pods-Ponix.release.xcconfig"; sourceTree = "<group>"; };
 		6D675D5F93A5F1610B15A058 /* Pods_Ponix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ponix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB66614E1FD369F100269452 /* PodServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodServices.swift; sourceTree = "<group>"; };
+		DB66614E1FD369F100269452 /* PodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodService.swift; sourceTree = "<group>"; };
 		DB6661501FD384FF00269452 /* SequenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceService.swift; sourceTree = "<group>"; };
 		DB9DBA271FC21DB900C5D17B /* StyledUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledUIView.swift; sourceTree = "<group>"; };
 		DB9DBA291FC285C200C5D17B /* StyledHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledHeaderView.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		DBA175B11FBD0EE900B89A7B /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DB66614E1FD369F100269452 /* PodServices.swift */,
+				DB66614E1FD369F100269452 /* PodService.swift */,
 				DB6661501FD384FF00269452 /* SequenceService.swift */,
 			);
 			path = Services;
@@ -325,7 +325,7 @@
 				DBB4BC271FB9678E00442418 /* ManageVC.swift in Sources */,
 				DBB4BC2E1FB96E0C00442418 /* Constants.swift in Sources */,
 				DBECCADB1FBBF856003CEF83 /* RoudedButton.swift in Sources */,
-				DB66614F1FD369F100269452 /* PodServices.swift in Sources */,
+				DB66614F1FD369F100269452 /* PodService.swift in Sources */,
 				DBB4BC231FB9673600442418 /* SWRevealViewController.m in Sources */,
 				DB9DBA361FC37B1800C5D17B /* AddPodVC.swift in Sources */,
 				DB6661511FD384FF00269452 /* SequenceService.swift in Sources */,

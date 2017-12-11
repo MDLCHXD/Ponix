@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ponix/Controller/MonitorVC.swift"
-            timestampString = "534477024.320193"
+            timestampString = "534656369.421775"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "returnBots()"
             landmarkType = "7">
          </BreakpointContent>
@@ -57,46 +57,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ponix/Services/PodService.swift"
-            timestampString = "534477024.320291"
+            filePath = "Ponix/Controller/MonitorVC.swift"
+            timestampString = "534656369.421867"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "returnBotRvI(id:bot:state:completion:)"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "refreshOptions(sender:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ponix.PodService.returnBotRvI(id: Swift.String, bot: Swift.String, state: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "Ponix"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andrewsmith/Xcode/projects/Ponix/Ponix/Ponix/Ponix/Services/PodService.swift"
-                  timestampString = "534476866.760545"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "631">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Ponix.PodService.returnBotRvI(id: Swift.String, bot: Swift.String, state: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "Ponix"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andrewsmith/Xcode/projects/Ponix/Ponix/Ponix/Ponix/Services/PodService.swift"
-                  timestampString = "534476866.762185"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "147"
-                  endingLineNumber = "147"
-                  offsetFromSymbolStart = "29">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -106,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ponix/Controller/MonitorVC.swift"
-            timestampString = "534477024.320632"
+            timestampString = "534656369.421926"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "scrollViewDidEndDecelerating(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
